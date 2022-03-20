@@ -1,6 +1,36 @@
 from flask import Flask, g, request, jsonify
 import sqlite3
 
+
+
+IMAGE_DATA = {
+    "category_1": {
+        "sub_category_1": [
+        ],
+        "sub_category_2": [
+        ],
+        "sub_category_3": [
+        ]
+    },
+    "category_2": {
+        "sub_category_1": [
+        ],
+        "sub_category_2": [
+        ],
+        "sub_category_3": [
+        ]
+    },
+    "category_3": {
+        "sub_category_1": [
+        ],
+        "sub_category_2": [
+        ],
+        "sub_category_3": [
+        ]
+    }
+}
+
+
 DATABASE = './database.db'
 app = Flask(__name__)
 
@@ -65,6 +95,16 @@ def login():
         output = {'message': 'Request must be JSON.'}
         response = 400
         return jsonify(output), response
+
+@app.get('/images/<category>/<sub_category>')
+def get_images(category, sub_category):
+    if category in IMAGE_DATA and sub_category in IMAGE_DATA[category]:
+        output = IMAGE_DATA[category][sub_category]
+        response = 200
+    else:
+        output = {'message': 'Category or sub_category does not exist.'}
+        response = 400
+    return jsonify(output), response
 
 if __name__ == '__main__':
     app.run()
