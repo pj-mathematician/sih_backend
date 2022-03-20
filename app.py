@@ -1,6 +1,8 @@
 from flask import Flask, g, request, jsonify
 import sqlite3
+from cryptography.fernet import Fernet
 
+KEY = "TluxwB3fV_GWuLkR1_BzGs1Zk90TYAuhNMZP_0q4WyM=".encode()
 IMAGE_DATA = {
     'category_1': {
         "sub_category_1": {
@@ -57,6 +59,8 @@ def signup():
         data = request.get_json()
         username = data['username']
         password = data['password']
+        f = Fernet(KEY)
+        # password = f.encrypt(password.encode()).decode()
         # check if username already exists
         db = get_db()
         # check if user table exists, else create it
@@ -88,6 +92,8 @@ def login():
         data = request.get_json()
         username = data['username']
         password = data['password']
+        f = Fernet(KEY)
+        # password = f.encrypt(password.encode()).decode()
         db = get_db()
         cur = db.execute('select * from sqlite_master where type = "table" and name = "users"')
         user_table = cur.fetchone()
