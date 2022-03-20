@@ -26,11 +26,40 @@ def signup():
         data = request.get_json()
         username = data['username']
         password = data['password']
+        # check if username already exists
         db = get_db()
-        db.execute('insert into users (username, password) values (?, ?)', [username, password])
-        db.commit()
-        output = {'message': 'User created successfully.'}
+        cur = db.execute('select * from users where username = ?', [username])
+        user = cur.fetchone()
+        if user is None:
+            db.execute('insert into users (username, password) values (?, ?)', [username, password])
+            db.commit()
+            output = {'message': 'User created successfully.'}
+            response = 200
+        else:
+            output = {'message': 'Username already exists.'}
+            response = 401
         response = 200
+        return jsonify(output), response
+    else:
+        output = {'message': 'Request must be JSON.'}
+        response = 400
+        return jsonify(output), response
+
+@app.post('/login')
+def login():
+    if request.is_json:
+        data = request.get_json()
+        username = data['username']
+        password = data['password']
+        db = get_db()
+        cur = db.execute('select * from users where username = ? and password = ?', [username, password])
+        user = cur.fetchone()
+        if user is None:
+            output = {'message': 'Invalid username or password.'}
+            response = 401
+        else:
+            output = {'message': 'User logged in successfully.'}
+            response = 200
         return jsonify(output), response
     else:
         output = {'message': 'Request must be JSON.'}
