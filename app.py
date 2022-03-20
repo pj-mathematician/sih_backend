@@ -29,10 +29,13 @@ def signup():
         db = get_db()
         db.execute('insert into users (username, password) values (?, ?)', [username, password])
         db.commit()
-        return 'User created successfully'
+        output = {'message': 'User created successfully.'}
+        response = 200
+        return jsonify(output), response
     else:
-        return 'Bad request'
-    # return 'Signup'
+        output = {'message': 'Request must be JSON.'}
+        response = 400
+        return jsonify(output), response
 
 if __name__ == '__main__':
     app.run()
