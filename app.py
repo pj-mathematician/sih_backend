@@ -6,26 +6,50 @@ KEY = "TluxwB3fV_GWuLkR1_BzGs1Zk90TYAuhNMZP_0q4WyM=".encode()
 IMAGE_DATA = {
     'category_1': {
         "sub_category_1": {
-            "image_1": "image_1.jpg",
-            "image_2": "image_2.jpg",
-            "image_3": "image_3.jpg",
+            "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
+            "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
+            "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
+            "i4": "https://cdn.discordapp.com/attachments/751667312825729074/954705249212461096/unknown.png",
+            "i5": "https://cdn.discordapp.com/attachments/751667312825729074/954705290954158120/unknown.png",
+            "i6": "https://cdn.discordapp.com/attachments/751667312825729074/954705365608579112/unknown.png",
+            "i7": "https://cdn.discordapp.com/attachments/751667312825729074/954705431643684925/unknown.png",
+            "i8": "https://cdn.discordapp.com/attachments/751667312825729074/954705476656980018/unknown.png",
+            "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         },
         "sub_category_2": {
-            "image_1": "image_1.jpg",
-            "image_2": "image_2.jpg",
-            "image_3": "image_3.jpg",
+            "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
+            "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
+            "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
+            "i4": "https://cdn.discordapp.com/attachments/751667312825729074/954705249212461096/unknown.png",
+            "i5": "https://cdn.discordapp.com/attachments/751667312825729074/954705290954158120/unknown.png",
+            "i6": "https://cdn.discordapp.com/attachments/751667312825729074/954705365608579112/unknown.png",
+            "i7": "https://cdn.discordapp.com/attachments/751667312825729074/954705431643684925/unknown.png",
+            "i8": "https://cdn.discordapp.com/attachments/751667312825729074/954705476656980018/unknown.png",
+            "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         }
     },
     'category_2': {
         "sub_category_1": {
-            "image_1": "image_1.jpg",
-            "image_2": "image_2.jpg",
-            "image_3": "image_3.jpg",
+            "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
+            "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
+            "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
+            "i4": "https://cdn.discordapp.com/attachments/751667312825729074/954705249212461096/unknown.png",
+            "i5": "https://cdn.discordapp.com/attachments/751667312825729074/954705290954158120/unknown.png",
+            "i6": "https://cdn.discordapp.com/attachments/751667312825729074/954705365608579112/unknown.png",
+            "i7": "https://cdn.discordapp.com/attachments/751667312825729074/954705431643684925/unknown.png",
+            "i8": "https://cdn.discordapp.com/attachments/751667312825729074/954705476656980018/unknown.png",
+            "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         },
         "sub_category_2": {
-            "image_1": "image_1.jpg",
-            "image_2": "image_2.jpg",
-            "image_3": "image_3.jpg",
+            "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
+            "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
+            "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
+            "i4": "https://cdn.discordapp.com/attachments/751667312825729074/954705249212461096/unknown.png",
+            "i5": "https://cdn.discordapp.com/attachments/751667312825729074/954705290954158120/unknown.png",
+            "i6": "https://cdn.discordapp.com/attachments/751667312825729074/954705365608579112/unknown.png",
+            "i7": "https://cdn.discordapp.com/attachments/751667312825729074/954705431643684925/unknown.png",
+            "i8": "https://cdn.discordapp.com/attachments/751667312825729074/954705476656980018/unknown.png",
+            "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         }
     }
 }
