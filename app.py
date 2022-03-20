@@ -42,8 +42,8 @@ IMAGE_DATA_2 = {
 
 
 IMAGE_DATA = {
-    'category_1': {
-        "sub_category_1": {
+    'cat_1': {
+        "cat_1_1": {
             "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
             "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
             "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
@@ -54,7 +54,7 @@ IMAGE_DATA = {
             "i8": "https://cdn.discordapp.com/attachments/751667312825729074/954705476656980018/unknown.png",
             "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         },
-        "sub_category_2": {
+        "cat_1_2": {
             "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
             "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
             "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
@@ -66,8 +66,8 @@ IMAGE_DATA = {
             "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         }
     },
-    'category_2': {
-        "sub_category_1": {
+    'cat_2': {
+        "cat_2_1": {
             "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
             "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
             "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
@@ -78,7 +78,7 @@ IMAGE_DATA = {
             "i8": "https://cdn.discordapp.com/attachments/751667312825729074/954705476656980018/unknown.png",
             "i9": "https://cdn.discordapp.com/attachments/751667312825729074/954703845907378176/unknown.png",
         },
-        "sub_category_2": {
+        "cat_2_2": {
             "i1": "https://cdn.discordapp.com/attachments/751667312825729074/954705082824421376/unknown.png",
             "i2": "https://cdn.discordapp.com/attachments/751667312825729074/954705146028380170/unknown.png",
             "i3": "https://cdn.discordapp.com/attachments/751667312825729074/954705201724530698/unknown.png",
