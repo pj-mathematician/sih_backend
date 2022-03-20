@@ -118,6 +118,18 @@ def get_images(category, sub_category):
         response = 400
     return jsonify(output), response
 
+@app.get('/alluserdata')
+def get_all_user_data():
+    db = get_db()
+    cur = db.execute('select * from sqlite_master where type = "table" and name = "users"')
+    user_table = cur.fetchone()
+    if user_table is None:
+        db.execute('create table users (username text, password text)')
+    cur = db.execute('select * from users')
+    users = cur.fetchall()
+    output = {'users': users}
+    response = 200
+    return jsonify(output), response
 
 if __name__ == '__main__':
     app.run()
