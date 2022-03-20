@@ -2,29 +2,29 @@ from flask import Flask, g, request, jsonify
 import sqlite3
 
 IMAGE_DATA = {
-    "category_1": {
-        "sub_category_1": [
-        ],
-        "sub_category_2": [
-        ],
-        "sub_category_3": [
-        ]
+    'category_1': {
+        "sub_category_1": {
+            "image_1": "image_1.jpg",
+            "image_2": "image_2.jpg",
+            "image_3": "image_3.jpg",
+        },
+        "sub_category_2": {
+            "image_1": "image_1.jpg",
+            "image_2": "image_2.jpg",
+            "image_3": "image_3.jpg",
+        }
     },
-    "category_2": {
-        "sub_category_1": [
-        ],
-        "sub_category_2": [
-        ],
-        "sub_category_3": [
-        ]
-    },
-    "category_3": {
-        "sub_category_1": [
-        ],
-        "sub_category_2": [
-        ],
-        "sub_category_3": [
-        ]
+    'category_2': {
+        "sub_category_1": {
+            "image_1": "image_1.jpg",
+            "image_2": "image_2.jpg",
+            "image_3": "image_3.jpg",
+        },
+        "sub_category_2": {
+            "image_1": "image_1.jpg",
+            "image_2": "image_2.jpg",
+            "image_3": "image_3.jpg",
+        }
     }
 }
 
