@@ -4,6 +4,39 @@ import sqlite3
 from cryptography.fernet import Fernet
 
 KEY = "TluxwB3fV_GWuLkR1_BzGs1Zk90TYAuhNMZP_0q4WyM=".encode()
+
+IMAGE_DATA_2 = {
+    "cat_1":{
+        "name":"category_1",
+        "address":"cat_1",
+        "children": {
+            "cat_1_1": {
+                "name": "sub_category_1",
+                "address": "cat_1/cat_1_1"
+            },
+            "cat_1_2": {
+                "name": "sub_category_2",
+                "address": "cat_1/cat_1_2"
+            }
+        }
+    },
+    "cat_2":{
+        "name":"category_2",
+        "address":"cat_2",
+        "children": {
+            "cat_2_1": {
+                "name": "sub_category_1",
+                "address": "cat_2/cat_2_1"
+            },
+            "cat_2_2": {
+                "name": "sub_category_2",
+                "address": "cat_2/cat_2_2"
+            }
+        }
+    }
+}
+
+
 IMAGE_DATA = {
     'category_1': {
         "sub_category_1": {
@@ -162,6 +195,12 @@ def get_image_sub_categories(category):
 @app.get('/images')
 def get_image_categories():
     output = list(IMAGE_DATA.keys())
+    response = 200
+    return jsonify(output), response
+
+@app.get("/images2")
+def get_images2():
+    output = IMAGE_DATA_2
     response = 200
     return jsonify(output), response
 
