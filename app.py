@@ -59,6 +59,11 @@ def signup():
         password = data['password']
         # check if username already exists
         db = get_db()
+        # check if user table exists, else create it
+        cur = db.execute('select * from sqlite_master where type = "table" and name = "users"')
+        user_table = cur.fetchone()
+        if user_table is None:
+            db.execute('create table users (username text, password text)')
         cur = db.execute('select * from users where username = ?', [username])
         user = cur.fetchone()
         if user is None:
@@ -84,6 +89,10 @@ def login():
         username = data['username']
         password = data['password']
         db = get_db()
+        cur = db.execute('select * from sqlite_master where type = "table" and name = "users"')
+        user_table = cur.fetchone()
+        if user_table is None:
+            db.execute('create table users (username text, password text)')
         cur = db.execute('select * from users where username = ? and password = ?', [username, password])
         user = cur.fetchone()
         if user is None:
