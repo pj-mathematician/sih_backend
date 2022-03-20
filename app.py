@@ -12,11 +12,13 @@ IMAGE_DATA_2 = {
         "children": {
             "cat_1_1": {
                 "name": "sub_category_1",
-                "address": "cat_1/cat_1_1"
+                "address": "cat_1/cat_1_1",
+                "children": None
             },
             "cat_1_2": {
                 "name": "sub_category_2",
-                "address": "cat_1/cat_1_2"
+                "address": "cat_1/cat_1_2",
+                "children": None
             }
         }
     },
@@ -26,11 +28,13 @@ IMAGE_DATA_2 = {
         "children": {
             "cat_2_1": {
                 "name": "sub_category_1",
-                "address": "cat_2/cat_2_1"
+                "address": "cat_2/cat_2_1",
+                "children": None
             },
             "cat_2_2": {
                 "name": "sub_category_2",
-                "address": "cat_2/cat_2_2"
+                "address": "cat_2/cat_2_2",
+                "children": None
             }
         }
     }
