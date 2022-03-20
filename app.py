@@ -1,4 +1,5 @@
 from flask import Flask, g, request, jsonify
+from flask_cors import CORS
 import sqlite3
 from cryptography.fernet import Fernet
 
@@ -56,7 +57,7 @@ IMAGE_DATA = {
 
 DATABASE = './database.db'
 app = Flask(__name__)
-
+CORS(app)
 
 def get_db():
     db = getattr(g, '_database', None)
@@ -146,6 +147,22 @@ def get_images(category, sub_category):
     else:
         output = {'message': 'Category or sub_category does not exist.'}
         response = 400
+    return jsonify(output), response
+
+@app.get('/images/<category>')
+def get_image_sub_categories(category):
+    if category in IMAGE_DATA:
+        output = list(IMAGE_DATA[category].keys())
+        response = 200
+    else:
+        output = {'message': 'Category does not exist.'}
+        response = 400
+    return jsonify(output), response
+
+@app.get('/images')
+def get_image_categories():
+    output = list(IMAGE_DATA.keys())
+    response = 200
     return jsonify(output), response
 
 @app.get('/alluserdata')
