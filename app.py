@@ -1,8 +1,6 @@
 from flask import Flask, g, request, jsonify
 import sqlite3
 
-
-
 IMAGE_DATA = {
     "category_1": {
         "sub_category_1": [
@@ -30,9 +28,9 @@ IMAGE_DATA = {
     }
 }
 
-
 DATABASE = './database.db'
 app = Flask(__name__)
+
 
 def get_db():
     db = getattr(g, '_database', None)
@@ -40,15 +38,18 @@ def get_db():
         db = g._database = sqlite3.connect(DATABASE)
     return db
 
+
 @app.teardown_appcontext
 def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
 
+
 @app.route('/')
 def hello_world():  # put application's code here
     return 'Hello World!'
+
 
 @app.post('/signup')
 def signup():
@@ -75,6 +76,7 @@ def signup():
         response = 400
         return jsonify(output), response
 
+
 @app.post('/login')
 def login():
     if request.is_json:
@@ -96,6 +98,7 @@ def login():
         response = 400
         return jsonify(output), response
 
+
 @app.get('/images/<category>/<sub_category>')
 def get_images(category, sub_category):
     if category in IMAGE_DATA and sub_category in IMAGE_DATA[category]:
@@ -105,6 +108,7 @@ def get_images(category, sub_category):
         output = {'message': 'Category or sub_category does not exist.'}
         response = 400
     return jsonify(output), response
+
 
 if __name__ == '__main__':
     app.run()
