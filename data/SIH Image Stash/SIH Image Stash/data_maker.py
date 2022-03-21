@@ -1,6 +1,6 @@
 import pyimgur
 import os
-CLIENT_ID = "00f3771c2e933ea"
+CLIENT_ID = "341d34bdc33ed94"
 im = pyimgur.Imgur(CLIENT_ID)
 # links = []
 data = {}
@@ -14,6 +14,7 @@ for i in l:
         for k in os.listdir(i+'/'+j):
             print(i + '/' + j + '/' + k)
             data[i][j]["image_{}".format(iter)] = im.upload_image(i + '/' + j + '/' + k).link
+            iter += 1
 with open('data.txt', 'w') as f:
     f.write(str(data))
 
